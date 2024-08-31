@@ -22,7 +22,7 @@ const HomePage = () => {
   };
 
   return (
-    <main className="md:pl-56 h-full">
+    <main className="md:pl-56 h-full md:pt-0 pt-[80px]">
       {/* Main content area with padding for top and left */}
       <div className="p-6">
         <p className="text-3xl font-bold uppercase">Flashcard Kanji N5</p>
