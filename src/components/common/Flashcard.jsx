@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Card, CardContent, CardFooter } from "../ui/card";
+import { Card } from "../ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -18,12 +18,8 @@ function Flashcard({ data }) {
             <div className="p-1">
               <div className="group perspective w-64 h-64 [perspective:1000px]">
                 <Card className="relative h-full w-full rounded-xl shadow-black transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                  <div className="absoblute inset-0 h-full">
-                    <img
-                      className="h-full w-full rounded-xl object-cover"
-                      src={item.srcImg}
-                      alt="img-kanji"
-                    />
+                  <div className="absoblute inset-0 h-full flex items-center justify-center">
+                    <img src={item.srcImg} alt="img-kanji" />
                   </div>
                   <div className="flex flex-col items-center justify-center absolute inset-0 h-full w-full rounded-xl bg-white px-12 text-center text-slate-900 [transform:rotateY(180deg)] [backface-visibility:hidden]">
                     <p className="text-2xl font-[700]">
