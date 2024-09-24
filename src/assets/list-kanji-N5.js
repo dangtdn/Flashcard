@@ -537,7 +537,7 @@ export const kanji_N5 = [
     id: "img-90",
     srcImg: "/images/img-kanji/90.png",
     chineseCharacters: "Thái",
-    vietnamCharacters: "Mập",
+    vietnamCharacters: "Khuyển, chó",
   },
   {
     id: "img-91",
