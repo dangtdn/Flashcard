@@ -2,14 +2,14 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { cn } from "../../lib/utils";
 
-const SideBarItem = ({ icon: Icon, label, href }) => {
+const SideBarItem = ({ icon, label, href }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const pathname = location.pathname.split("/").at(-1); // Get the last part of the pathname
 
   // Determine if the sidebar item is active
   const isActive =
-    (pathname === "dashboard" && href === "/dashboard") ||
+    (pathname === "flashcard-kanji" && href === "/flashcard-kanji") ||
     pathname === href ||
     pathname?.startsWith(`${href}/`);
 
@@ -28,11 +28,8 @@ const SideBarItem = ({ icon: Icon, label, href }) => {
           "text-sky-700 bg-sky-200/20 hover:bg-sky-200/20 hover:text-sky-700"
       )}
     >
-      <div className="flex items-center gap-x-2 py-4">
-        <Icon
-          size={22}
-          className={cn("text-slate-500", isActive && "text-sky-700")}
-        />
+      <div className="flex items-center gap-x-4 py-4">
+        <span className="text-2xl font-bold text-black">{icon}</span>
         {label}
       </div>
     </button>

@@ -1,8 +1,10 @@
 import React from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import SideBar from "../components/common/SideBar";
-import HomePage from "../pages/home/Home";
+import KanjiPage from "../pages/kanji/KanjiPage";
 import Navbar from "../components/common/Navbar";
+import KatakanaPage from "../pages/katakana/KatakanaPage";
+import HiraganaPage from "../pages/hiragana/HiraganaPage";
 
 const Router = () => {
   const routes = () => (
@@ -14,9 +16,11 @@ const Router = () => {
         <SideBar />
       </div>
       <Routes>
-        <Route index element={<Navigate to={"flashcard"} />} />
-        <Route path={"flashcard"} element={<HomePage />} />
-        <Route path="*" element={<Navigate to={`../${"flashcard"}`} />} />
+        <Route index element={<Navigate to={"flashcard-kanji"} />} />
+        <Route path={"flashcard-kanji"} element={<KanjiPage />} />
+        <Route path={"flashcard-hiragana"} element={<HiraganaPage />} />
+        <Route path={"flashcard-katakana"} element={<KatakanaPage />} />
+        <Route path="*" element={<Navigate to={`../${"flashcard-kanji"}`} />} />
       </Routes>
     </div>
   );
